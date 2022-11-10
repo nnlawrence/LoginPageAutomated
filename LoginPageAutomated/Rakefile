@@ -1,0 +1,38 @@
+Dir.glob('lib/tasks/*.rake').each { |r| load r }
+
+def generate_command(parallel: true)
+  if ENV['COMMAND']
+    ENV['COMMAND']
+  elsif ENV['APP_TAG']
+    "bundle exec parallel_rspec --serialize-stdout -n 8 -- --tag #{ENV['APP_TAG']} -- spec"
+  elsif ARGV.count > 1
+    case parallel
+    when false
+      "bundle exec rspec  #{ARGV.drop(1).join(' ')}"
+    when true
+      "bundle exec parallel_rspec --serialize-stdout -n 8  #{ARGV.drop(1).join(' ')}"
+    end
+  else
+    'bundle exec parallel_rspec --serialize-stdout -n 8 -- --tag ~internal:true -- spec'
+  end
+end
+
+def execute_tests(command)
+  environment_variables = { 'TEAM_NAME' => 'platform', 'TASK_ID' => Time.now.strftime('%s%6N') }
+
+  puts "Running '#{command}' with environment variables #{environment_variables}"
+  exit_status = system(environment_variables, command)
+
+  exit 0 if exit_status
+  exit 1
+end
+
+desc 'Run tests in serial and report results'
+task :run_tests_serial do
+  execute_tests(generate_command(false))
+end
+
+desc 'Run tests in parallel and report results'
+task :run_tests do
+  execute_tests(generate_command)
+end

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="rspec" tests="10" skipped="0" failures="0" errors="0" time="9.514158" timestamp="2022-11-10T16:04:11-07:00" hostname="19441-NLawrence.local">
+<properties>
+<property name="seed" value="32279"/>
+</properties>
+<testcase classname="spec.apps.hudl.tests.login_page_spec" name="Hudl Log In Page: when visiting login page Verify User Can Log In And View Content" file="./spec/apps/hudl/tests/login_page_spec.rb" time="5.332442"></testcase>
+<testcase classname="spec.apps.hudl.tests.login_page_spec" name="Hudl Log In Page: when visiting login page Verify Displayed Icon: Back Button Arrow Is Visible" file="./spec/apps/hudl/tests/login_page_spec.rb" time="0.355237"></testcase>
+<testcase classname="spec.apps.hudl.tests.login_page_spec" name="Hudl Log In Page: when visiting login page Verify Displayed Link: Sign Up Is Visible And Contains Expected Path" file="./spec/apps/hudl/tests/login_page_spec.rb" time="1.006215"></testcase>
+<testcase classname="spec.apps.hudl.tests.login_page_spec" name="Hudl Log In Page: when visiting login page Verify Displayed Input: Email Is Visible" file="./spec/apps/hudl/tests/login_page_spec.rb" time="0.280745"></testcase>
+<testcase classname="spec.apps.hudl.tests.login_page_spec" name="Hudl Log In Page: when visiting login page Verify Displayed Input: Password Is Visible" file="./spec/apps/hudl/tests/login_page_spec.rb" time="0.248519"></testcase>
+<testcase classname="spec.apps.hudl.tests.login_page_spec" name="Hudl Log In Page: when visiting login page Verify Displayed Button: Log In Is Visible" file="./spec/apps/hudl/tests/login_page_spec.rb" time="0.221965"></testcase>
+<testcase classname="spec.apps.hudl.tests.login_page_spec" name="Hudl Log In Page: when visiting login page Verify Displayed Checkbox: Remember me Is Visible And Functioning" file="./spec/apps/hudl/tests/login_page_spec.rb" time="0.304180"></testcase>
+<testcase classname="spec.apps.hudl.tests.login_page_spec" name="Hudl Log In Page: when visiting login page Verify Displayed Link: Need help? Is Visible And Functioning" file="./spec/apps/hudl/tests/login_page_spec.rb" time="0.279051"></testcase>
+<testcase classname="spec.apps.hudl.tests.login_page_spec" name="Hudl Log In Page: when visiting login page Verify Displayed Button: Log In with an Organization Is Visble And Functioning" file="./spec/apps/hudl/tests/login_page_spec.rb" time="0.654769"></testcase>
+<testcase classname="spec.apps.hudl.tests.login_page_spec" name="Hudl Log In Page: when logging in with invalid credentials on login page Verify User Unable To Login And Error Message Displays" file="./spec/apps/hudl/tests/login_page_spec.rb" time="0.826555"></testcase>
+</testsuite>

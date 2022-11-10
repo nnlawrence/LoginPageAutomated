@@ -1,0 +1,36 @@
+require './config/environments/dotenv'
+
+require 'capybara'
+require 'capybara/rspec'
+require 'csv'
+require 'rspec/expectations'
+require 'require_all'
+require 'net/http'
+require 'uri'
+require 'net/https'
+require 'pry'
+require 'json'
+require 'rspec'
+require 'tzinfo'
+require 'selenium-webdriver'
+
+require './modules/rspec_junit_formatter_config'
+require './modules/rspec_config'
+require 'support/utilities'
+
+require 'colorize'
+require 'faker'
+require 'json-compare'
+require 'oauth2'
+require 'rest-client'
+require 'timeout'
+require 'ruby-terraform'
+require 'resolv-replace'
+require 'logger'
+require 'active_support'
+require 'active_support/core_ext/hash'
+require_all 'spec/support/modules'
+require_all 'spec/apps/**/**/**/application.rb'
+
+include RSpec::Core::Pending
+Dir["#{File.dirname(__FILE__)}/apps/**/helpers/**/*.rb"].each { |f| require f }

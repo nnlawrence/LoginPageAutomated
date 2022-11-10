@@ -1,0 +1,23 @@
+####################################################################################################
+# Create a file with this same filename plus `.local` appended to the end.
+# Then add the following secret environment variables to it.
+# These must never be checked in to version control (i.e. don't commit to git or push to GitHub).
+####################################################################################################
+# SECRET_ENV_VAR_LIST
+# CLIENT_ID=''
+# API_KEY=''
+
+####################################################################################################
+# Add any non-secret environment variables below.
+####################################################################################################
+ACCEPT_TYPE='application/vnd.mx.api.v1+json'
+CONTENT_MONEY_DESKTOP_URL='https://content.moneydesktop.com'
+CONTENT_TYPE='application/json'
+GRINGOTTS_URL='https://gringotts.qa.internal.mx'
+MX_LOGO_URL='https://content.mx.com'
+PLATFORM_BASE_URL='https://sd-qa-api.qa.internal.mx'
+
+####################################################################################################
+User Info
+###################################################################################################
+PLATFORM_USER_GUID='USR-00950135-99e9-4914-8cbe-3d98ce6beea5'
